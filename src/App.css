@@ -1,0 +1,25 @@
+
+
+
+@font-face {
+  font-family: 'SDGlitchDemo';
+  src: url('/fonts/SDGlitch_Demo.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'MiFuente', sans-serif;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  width: 100%;
+}
+#root {
+  
+  margin: 0;
+  padding: 0;
+  width: 100vw;      /* siempre ocupa todo el ancho de la ventana */
+  min-height: 100vh; /* siempre ocupa toda la altura visible */
+  overflow-x: hidden; /* evita scroll horizontal innecesario */
+}
