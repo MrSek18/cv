@@ -69,7 +69,7 @@ function App() {
           {/* Projects */}
           <div className="flex flex-col h-auto  w-[95%]  z-0 ">
             <h1
-              className="pl-5 text-xl tracking-[0.25em]  text-[#fff] text-center md:text-left mt-10" 
+              className="pl-5 text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left mt-10" 
               style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
             >
               Projects
@@ -125,7 +125,7 @@ function App() {
                     MVC Panel
                   </h1>
                   <p
-                    className="text-xs tracking-wider text-center  @[380px]: text-left"
+                    className="text-base tracking-wider text-center  @[380px]: text-left"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                   >
                     Panel de administración para proyectos, clientes y empleados.
