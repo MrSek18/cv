@@ -67,7 +67,7 @@ function App() {
 
 
           {/* Projects */}
-          <div className="flex flex-col h-auto  w-[95%]  z-0 border-1">
+          <div className="flex flex-col h-auto  w-[95%]  z-0 ">
             <h1
               className="pl-5 text-xl tracking-[0.25em]  text-[#fff] text-center md:text-left mt-10" 
               style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
