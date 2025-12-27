@@ -2,6 +2,9 @@
 import './App.css'
 import { useEffect } from 'react'
 import { useState } from "react";
+import mysql_logo from "./assets/mysql_logo.png";
+import card1Img1 from "./assets/ongProyectImg.png";
+import card2Img1 from "./assets/requestProyectImg.png";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -29,25 +32,25 @@ function App() {
           >
           </div>
           {/* Header */}
-            <div className="flex flex-wrap h-auto min-h-[340px] w-[95%] items-start [container-type:inline-size] pt-10 border-2 border-green-500">
+            <div className="flex flex-wrap h-auto min-h-[340px] w-[95%] items-start [container-type:inline-size] pt-10 ">
               {/* Primer bloque */}
-              <div className="w-full sm:w-[50%] flex flex-col justify-center space-y-3  sm:items-start items-center border-2 border-red-500 ">
+              <div className="w-full sm:w-[50%] flex flex-col justify-center space-y-3  sm:items-start items-center  ">
                 <div className="h-[250px] space-y-3 flex flex-col justify-center ">
 
                   <h1
-                    className="text-7xl md:text-7xl text-white tracking-[0.25em] text-center  @[470px]:text-left  border-1"
+                    className="text-7xl md:text-7xl text-white tracking-[0.25em] text-center  @[470px]:text-left  "
                     style={{ fontFamily: "'SDGlitchDemo', sans-serif" }}
                   >
                     KEVIN BG
                   </h1>
                   <h2
-                    className="text-lg md:text-lg tracking-wide text-white w-auto text-center @[470px]:text-left border-1"
+                    className="text-lg md:text-lg tracking-wide text-white w-auto text-center @[470px]:text-left "
                     style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 300 }}
                   >
                     Software Engineer with IA student
                   </h2>
                   <p
-                    className="text-sm tracking-wide text-white text-center @[470px]:text-left  border-1"
+                    className="text-sm tracking-wide text-white text-center @[470px]:text-left  "
                     style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 100 }}
                   >
                     I like to program
@@ -56,27 +59,103 @@ function App() {
               </div>
 
               {/* Segundo bloque */}
-              <div className="w-full sm:w-[50%] h-full flex justify-center sm:justify-end items-center border-2">
+              <div className="w-full sm:w-[50%] h-full flex justify-center sm:justify-end items-center ">
                 <img
-                  src="/img/hacking_guy_logo.png"
+                  src={"/img/hacking_guy_logo.png"}
                   alt="hacking guy logo"
-                  className="w-60 h-60 sm:w-80 sm:h-80 object-cover rounded @[470px]:mx-0 mx-auto border-2"
+                  className="w-60 h-60 sm:w-80 sm:h-80 object-cover rounded @[470px]:mx-0 mx-auto "
                 />
               </div>
             </div>
 
 
           {/* Projects */}
-          <div className="flex flex-col h-auto  w-[95%]  z-0 ">
+          <div className="flex flex-col h-auto  w-[95%]  z-0  mt-20">
             <h1
-              className="pl-5 text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left mt-10" 
+              className="pl-5 text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left " 
               style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
             >
               Projects
             </h1>
 
-            <div className="flex flex-col md:flex-row gap-6 w-full justify-center items-center  [container-type:inline-size]" >
+            <div className="flex flex-col md:flex-row gap-6 w-full justify-center items-center  [container-type:inline-size]  mt-5" >
               {/* Tarjeta 1 */}
+              <div className="w-70 h-auto @[380px]:w-[350px] flex flex-col @[380px]:flex-row  items-center relative z-0  gap-y-4 pt-15 pb-10">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 350 240"
+                  className="absolute top-0 left-0 z-0"
+                  preserveAspectRatio="none"
+                >
+                  {/* líneas y polígonos */}
+                  <line x1="1" y1="19" x2="150" y2="19" stroke="#fff" strokeWidth=".5" />
+                  <line x1="1" y1="19" x2="1" y2="239" stroke="#fff" strokeWidth=".5" />
+                  <line x1="1" y1="239" x2="349" y2="239" stroke="#fff" strokeWidth=".5" />
+                  <line x1="250" y1="19" x2="349" y2="19" stroke="#fff" strokeWidth=".5" />
+                  <line x1="250.5" y1="18.8" x2="234" y2="32" stroke="#fff" strokeWidth=".5" />
+                  <polyline
+                    points="349,19 349,30 329,50 329,150 349,160 349,239"
+                    stroke="#fff"
+                    strokeWidth=".5"
+                    fill="none"
+                  />
+                  <polyline
+                    points="170,23 170,15 180,15 180,23 170,23"
+                    stroke="#fff"
+                    strokeWidth=".5"
+                    fill="none"
+                  />
+                  <polyline
+                    points="190,23 190,15 200,15 200,23 190,23"
+                    stroke="#fff"
+                    strokeWidth=".5"
+                    fill="#04D9D9"
+                  />
+                  <polyline
+                    points="210,23 210,15 220,15 220,23 210,23"
+                    stroke="#fff"
+                    strokeWidth=".5"
+                    fill="none"
+                  />
+                </svg>
+
+                <div className="h-auto w-[80%] flex flex-col items-center @[380px]:items-start  justify-center space-y-3 text-left z-10 ">
+                  <h1
+                    className="text-2xl tracking-[0.15em] text-[#02E8E8]"
+                    style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
+                  >
+                    ONG
+                  </h1>
+                  <p
+                    className="text-base tracking-wider text-center @[380px]: text-left"
+                    style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
+                  >
+                    Pagina institucional con sistema de donacion integrado con mercado pago
+                  </p>
+                  <div className="flex justify-center gap-1">
+                    <img src="/img/laravel_logo.png" alt="laravel" className="h-7.5 w-7.5" />
+                    <img src={mysql_logo} alt="postgresql" className="h-7.5 w-7.5 " />
+                    <img src="/img/react_logo.png" alt="react" className="h-7.5 w-7.5" />
+                  </div>
+                </div>
+
+                <div className="h-30 w-[70%] relative flex items-center justify-center z-10 ">
+                  <div
+                    className="h-full w-full"
+                    style={{
+                      backgroundImage: `url(${card1Img1})`,
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      clipPath:
+                        'polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px)',
+                    }}
+                  ></div>
+                </div>
+              </div>
+
+              {/* Tarjeta 2 */}
               <div className="w-70 h-auto @[380px]:w-[350px] flex flex-col @[380px]:flex-row  items-center relative z-0  gap-y-4 pt-15 pb-10">
                 <svg
                   width="100%"
@@ -125,15 +204,15 @@ function App() {
                     MVC Panel
                   </h1>
                   <p
-                    className="text-base tracking-wider text-center  @[380px]: text-left"
+                    className="text-base tracking-wider text-center @[380px]: text-left"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                   >
                     Panel de administración para proyectos, clientes y empleados.
                   </p>
                   <div className="flex justify-center gap-1">
-                    <img src="/img/laravel_logo.png" alt="laravel" className="h-[17px] w-[16px]" />
-                    <img src="/img/postgresql_logo.png" alt="postgresql" className="h-[17px] w-[16px]" />
-                    <img src="/img/react_logo.png" alt="react" className="h-[15px] w-[17px]" />
+                    <img src="/img/laravel_logo.png" alt="laravel" className="h-7.5 w-7.5" />
+                    <img src={mysql_logo} alt="postgresql" className="h-7.5 w-7.5 " />
+                    <img src="/img/react_logo.png" alt="react" className="h-7.5 w-7.5" />
                   </div>
                 </div>
 
@@ -141,83 +220,7 @@ function App() {
                   <div
                     className="h-full w-full"
                     style={{
-                      backgroundImage: 'url(/img/bg_mvcpanel_project1.png)',
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                      clipPath:
-                        'polygon(15px 0%, 100% 0%, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0% 100%, 0% 15px)',
-                    }}
-                  ></div>
-                </div>
-              </div>
-
-              {/* Tarjeta 2 */}
-              <div className="w-[350px] flex items-center relative z-0 border">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 350 240"
-                  className="absolute top-0 left-0 z-0"
-                  preserveAspectRatio="none"
-                >
-                  {/* líneas y polígonos */}
-                  <line x1="1" y1="19" x2="150" y2="19" stroke="#fff" strokeWidth=".5" />
-                  <line x1="1" y1="19" x2="1" y2="239" stroke="#fff" strokeWidth=".5" />
-                  <line x1="1" y1="239" x2="349" y2="239" stroke="#fff" strokeWidth=".5" />
-                  <line x1="250" y1="19" x2="349" y2="19" stroke="#fff" strokeWidth=".5" />
-                  <line x1="250.5" y1="18.8" x2="234" y2="32" stroke="#fff" strokeWidth=".5" />
-                  <polyline
-                    points="349,19 349,30 329,50 329,150 349,160 349,239"
-                    stroke="#fff"
-                    strokeWidth=".5"
-                    fill="none"
-                  />
-                  <polyline
-                    points="170,23 170,15 180,15 180,23 170,23"
-                    stroke="#fff"
-                    strokeWidth=".5"
-                    fill="none"
-                  />
-                  <polyline
-                    points="190,23 190,15 200,15 200,23 190,23"
-                    stroke="#fff"
-                    strokeWidth=".5"
-                    fill="#04D9D9"
-                  />
-                  <polyline
-                    points="210,23 210,15 220,15 220,23 210,23"
-                    stroke="#fff"
-                    strokeWidth=".5"
-                    fill="none"
-                  />
-                </svg>
-
-                <div className="h-[200px] w-[150px] flex flex-col items-start justify-center space-y-3 text-left ml-5 z-10 border">
-                  <h1
-                    className="text-2xl tracking-[0.15em] text-[#02E8E8]"
-                    style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
-                  >
-                    Web Store
-                  </h1>
-                  <p
-                    className="text-xs tracking-wider"
-                    style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
-                  >
-                    Tienda virtual completa interactiva con registro de usuarios y envío automatizado.
-                  </p>
-                  <div className="flex justify-center gap-1">
-                    <img src="/img/laravel_logo.png" alt="laravel" className="h-[17px] w-[16px]" />
-                    <img src="/img/postgresql_logo.png" alt="postgresql" className="h-[17px] w-[16px]" />
-                    <img src="/img/react_logo.png" alt="react" className="h-[15px] w-[17px]" />
-                  </div>
-                </div>
-
-                <div className="h-[200px] w-[150px] relative flex items-center justify-center z-10 border">
-                  <div
-                    className="h-[100px] w-full"
-                    style={{
-                      backgroundImage: 'url(/img/bg_webstore_project2.png)',
+                      backgroundImage: `url(${card2Img1})`,
                       backgroundSize: 'cover',
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center',
