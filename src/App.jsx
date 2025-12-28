@@ -70,7 +70,7 @@ function App() {
 
 
           {/* Projects */}
-          <div className="flex flex-col h-auto  w-full z-0 mt-20 border-1">
+          <div className="flex flex-col h-auto  w-full z-0 mt-20 ">
             <h1
               className="md:pl-5 text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left " 
               style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
@@ -234,14 +234,14 @@ function App() {
           </div>
 
           {/* Technologies / Tools  */}
-          <div className="flex flex-col h-auto w-full z-0 mt-20 border-1">
+          <div className="flex flex-col h-auto w-full z-0 mt-20 ">
             <h1 className="md:pl-5 text-2xl tracking-[0.25em] text-[#fff] text-center md:text-left"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Technologies / Tools 
             </h1>
             <div className='flex flex-wrap gap-6 w-full max-w-3xl justify-around items-center mt-6'>
-              <div className='h-auto w-full max-w-120 sm:w-120 flex items-center justify-center relative  pl-10 pr-10 pb-12'>
+              <div className='h-auto w-full max-w-120 sm:w-120 flex items-center justify-center relative  pl-10 pr-10 pb-12  [container-type:inline-size] '>
               
-                <svg width="100%" height="100%" viewBox="0 0 400 240" className="absolute top-0 left-0" preserveAspectRatio="none">
+                <svg width="100%" height="100%" viewBox="0 0 400 240" className="absolute top-0 left-0 hidden @[384px]:block" preserveAspectRatio="none">
                   <line x1="40" y1="1" x2="350" y2="1" stroke="#fff" stroke-width=".5" />
                   <line x1="40" y1="1" x2="20" y2="30" stroke="#fff" stroke-width=".5" />
                   <line x1="20" y1="30" x2="20" y2="219" stroke="#fff" stroke-width=".5" />
@@ -339,7 +339,7 @@ function App() {
 
                   
                 </svg>
-                <div className='h-auto w-full flex flex-col items-center text-left [container-type:inline-size] mb-5  '>
+                <div className='h-auto w-full flex flex-col items-center text-left [container-type:inline-size]   '>
                   <h1 className="text-md tracking-[0.15em] mb-5 mt-5 text-center sm:text-left  w-full"
                   style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >FRAMEWORKS</h1>
                   
@@ -882,17 +882,21 @@ function App() {
             </div>
           </div>
           <div className='flex flex-wrap items-center mt-20 border-2 w-full '>
-            <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-left border-2 w-full"
+            <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-center border-2 w-full sm:text-left"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Info
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full pt-5 border-4 border-yellow-500 p-10" >
-              <div class="  h-64 text-left border-2 border-green-500" style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
-                <h2 className=" tracking-[0.25em] text-lg text-[#02E8E8]">Education</h2>
-                <p class="mt-3 font-light" >Software Engineer with IA</p>
-                <p class="mt-3 font-light">Senati - Higher Technological Institute</p>
-                <p class="mt-3 font-light">January 2024 - Currently</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full pt-5 border-4 border-yellow-500 p-10 " >
+              <div
+                className="h-auto text-center border-2 border-green-500 flex flex-col justify-center items-center"
+                style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
+              >
+                <h2 className="tracking-[0.25em] text-lg text-[#02E8E8]">Education</h2>
+                <p className="mt-3 font-light">Software Engineer with IA</p>
+                <p className="mt-3 font-light">Senati - Higher Technological Institute</p>
+                <p className="mt-3 font-light">January 2024 - Currently</p>
               </div>
-              <div class=" h-64 text-left border-2 border-green-500" style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
+
+              <div class=" h-auto text-left border-2 border-green-500 flex flex-col justify-center items-center" style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
                 <h2 className=" tracking-[0.25em] text-lg text-[#02E8E8]">Email</h2>
                 <p class=" mt-1 font-light" >mrsek0192@gmail.com</p>
                 <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Adress</h2>
@@ -900,7 +904,7 @@ function App() {
                 <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Number</h2>
                 <p class=" mt-1 font-light" >991979925</p>
               </div>
-              <div className=" justify-start flex border-2 border-green-500">
+              <div className=" h-auto justify-start flex border-2 border-green-500">
                 <div className='h-13 w-30 flex items-center relative justify-center align-center '>
                   <svg width="100%" height="100%" viewBox="0 0 30 13" className="absolute top-0 left-0" preserveAspectRatio="none">
 
