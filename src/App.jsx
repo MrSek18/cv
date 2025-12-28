@@ -70,17 +70,17 @@ function App() {
 
 
           {/* Projects */}
-          <div className="flex flex-col h-auto  w-[95%]  z-0  mt-20">
+          <div className="flex flex-col h-auto  w-full z-0 mt-20 border-1">
             <h1
-              className="pl-5 text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left " 
+              className="md:pl-5 text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left " 
               style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
             >
               Projects
             </h1>
 
-            <div className="flex flex-col md:flex-row gap-6 w-full justify-center items-center  [container-type:inline-size]  mt-5" >
+            <div className="flex h-auto sm:h-75 flex-col sm:flex-row gap-6 w-full justify-center items-center  [container-type:inline-size] mt-5" >
               {/* Tarjeta 1 */}
-              <div className="w-70 h-auto @[380px]:w-[350px] flex flex-col @[380px]:flex-row  items-center relative z-0  gap-y-4 pt-15 pb-10">
+              <div className="w-70 h-full @[380px]:w-[360px] @[380px]:p-7 flex flex-col @[380px]:flex-row  items-center relative z-0 gap-x-4  gap-y-4 pt-15 pb-10 ">
                 <svg
                   width="100%"
                   height="100%"
@@ -120,7 +120,7 @@ function App() {
                   />
                 </svg>
 
-                <div className="h-auto w-[80%] flex flex-col items-center @[380px]:items-start  justify-center space-y-3 text-left z-10 ">
+                <div className="h-auto w-[80%] sm:w-[60%] flex flex-col items-center @[380px]:items-start  justify-center space-y-3 text-left z-10 ">
                   <h1
                     className="text-2xl tracking-[0.15em] text-[#02E8E8]"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
@@ -156,7 +156,7 @@ function App() {
               </div>
 
               {/* Tarjeta 2 */}
-              <div className="w-70 h-auto @[380px]:w-[350px] flex flex-col @[380px]:flex-row  items-center relative z-0  gap-y-4 pt-15 pb-10">
+              <div className="w-70 h-full @[380px]:w-[360px] @[380px]:p-7 flex flex-col @[380px]:flex-row  items-center relative z-0 gap-x-4 gap-y-4 pt-15 pb-10 ">
                 <svg
                   width="100%"
                   height="100%"
@@ -196,7 +196,7 @@ function App() {
                   />
                 </svg>
 
-                <div className="h-auto w-[80%] flex flex-col items-center @[380px]:items-start  justify-center space-y-3 text-left z-10 ">
+                <div className="h-auto w-[80%] sm:w-[60%] flex flex-col items-center @[380px]:items-start  justify-center space-y-3 text-left z-10 ">
                   <h1
                     className="text-2xl tracking-[0.15em] text-[#02E8E8]"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
@@ -234,12 +234,12 @@ function App() {
           </div>
 
           {/* Technologies / Tools  */}
-          <div className="flex flex-col w-full mt-10">
-            <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-left"
+          <div className="flex flex-col h-auto w-full z-0 mt-20 border-1">
+            <h1 className="md:pl-5 text-2xl tracking-[0.25em] text-[#fff] text-center md:text-left"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Technologies / Tools 
             </h1>
             <div className='flex flex-wrap gap-6 w-full max-w-3xl justify-around items-center mt-6'>
-              <div className='h-[280px] w-[500px] flex items-center justify-center relative '>
+              <div className='h-auto w-full max-w-120 sm:w-120 flex items-center justify-center relative  pl-10 pr-10 pb-12'>
               
                 <svg width="100%" height="100%" viewBox="0 0 400 240" className="absolute top-0 left-0" preserveAspectRatio="none">
                   <line x1="40" y1="1" x2="350" y2="1" stroke="#fff" stroke-width=".5" />
@@ -339,95 +339,126 @@ function App() {
 
                   
                 </svg>
-                <h1></h1>
-                <div className='h-[280px] w-[400px] flex flex-col items-start  text-left '>
-                  <h1 className="text-md tracking-[0.15em] mt-5 mb-5"
+                <div className='h-auto w-full flex flex-col items-center text-left [container-type:inline-size] mb-5  '>
+                  <h1 className="text-md tracking-[0.15em] mb-5 mt-5 text-center sm:text-left  w-full"
                   style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >FRAMEWORKS</h1>
                   
-                  <div className='flex justify-center flex-wrap gap-3'>
+                  <div
+                    className="
+                      flex
+                      flex-wrap
+                      justify-center
+                      gap-3
+                      max-w-[390px]
+                      sm:max-w-[560px]
                       
-                      <div 
-                        className="h-[170px] w-[120px] flex flex-col items-center  relative" >
-                          <h1 className="text-sm tracking-[0.10em] mt-1 mb-7"
-                          style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Backend</h1>
-                          <img 
-                            src="/img/laravel_logo.png" 
-                            alt="postgresql logo"
-                            className="w-[57.684px] h-[60px] object-cover rounded"
-                          />
-                          <svg width="100%" height="100%" viewBox="0 0 120 170" className="absolute top-0 left-0" preserveAspectRatio="none">
-                            <line 
-                              x1="0" y1="0" x2="0" y2="170" stroke="#FF2D20" stroke-width="6" />
-                              <polyline
-                                points="2,1 115,1 115,140 105,140 105,169 2,169"
-                                stroke="rgba(255, 45, 32, .28)" // 28% de opacidad
-                                strokeWidth="1.7"
-                                fill="none"
-                              />
-                              <polyline
-                                points="115.9,0.4 120,0.4 120,144 110,144 110,169.7 105.9,169.7"
-                                stroke="rgba(255, 45, 32, .28)" // 28% de opacidad
-                                strokeWidth="0.8"
-                                fill="none"
-                              />
-                          </svg>
-                      </div>
-                      <div 
-                        className="h-[170px] w-[120px] flex flex-col items-center  relative" >
-                          <h1 className="text-sm tracking-[0.10em] mt-1 mb-7"
-                          style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Frontend</h1>
-                          <img 
-                            src="/img/react_logo.png" 
-                            alt="postgresql logo"
-                            className="w-[60px] h-[53.4375.px] object-cover rounded"
-                          />
-                          <svg width="100%" height="100%" viewBox="0 0 120 170" className="absolute top-0 left-0" preserveAspectRatio="none">
-                            <line // target line
-                              x1="0" y1="0" x2="0" y2="170" stroke="#30A2FF" stroke-width="6" />
-                              <polyline
-                                points="2,1 115,1 115,140 105,140 105,169 2,169"
-                                stroke="rgba(48, 162, 255, .28)" // 28% de opacidad
-                                strokeWidth="1.7"
-                                fill="none"
-                              />
-                              <polyline
-                                points="115.9,0.4 120,0.4 120,144 110,144 110,169.7 105.9,169.7"
-                                stroke="rgba(48, 162, 255, .28)" // 28% de opacidad
-                                strokeWidth="0.8"
-                                fill="none"
-                              />
-                          </svg>
-                      </div>
-                      <div 
-                        className="h-[170px] w-[120px] flex flex-col items-center relative" >
-                          <h1 className="text-sm tracking-[0.10em] mt-1 mb-10 "
-                          style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Styling</h1>
-                          <img 
-                            src="/img/tailwindcss_logo.png" 
-                            alt="postgresql logo"
-                            className="w-[60px] h-[36.09375px] object-cover rounded "
-                          />
-                          <svg width="100%" height="100%" viewBox="0 0 120 170" className="absolute top-0 left-0" preserveAspectRatio="none">
-                            <line // target line
-                              x1="0" y1="0" x2="0" y2="170" stroke="#0FCEB7" stroke-width="6" />
-                              <polyline
-                                points="2,1 115,1 115,140 105,140 105,169 2,169"
-                                stroke="rgba(15, 206, 183, 0.28)" // 28% de opacidad
-                                strokeWidth="1.7"
-                                fill="none"
-                              />
-                              <polyline
-                                points="115.9,0.4 120,0.4 120,144 110,144 110,169.7 105.9,169.7"
-                                stroke="rgba(15, 206, 183, 0.28)" // 28% de opacidad
-                                strokeWidth="0.8"
-                                fill="none"
-                              />
-                          </svg>
-                      </div>
-                      
+                    "
+                  >
+                    <div className="h-[170px] w-[120px] flex flex-col items-center relative ">
+                      <h1
+                        className="text-sm tracking-[0.10em] mt-1 mb-7"
+                        style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
+                      >
+                        Backend
+                      </h1>
+                      <img
+                        src="/img/laravel_logo.png"
+                        alt="laravel logo"
+                        className="w-[57.684px] h-[60px] object-cover rounded"
+                      />
+                      <svg
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 120 170"
+                        className="absolute top-0 left-0"
+                        preserveAspectRatio="none"
+                      >
+                        <line x1="0" y1="0" x2="0" y2="170" stroke="#FF2D20" strokeWidth="6" />
+                        <polyline
+                          points="2,1 115,1 115,140 105,140 105,169 2,169"
+                          stroke="rgba(255, 45, 32, .28)"
+                          strokeWidth="1.7"
+                          fill="none"
+                        />
+                        <polyline
+                          points="115.9,0.4 120,0.4 120,144 110,144 110,169.7 105.9,169.7"
+                          stroke="rgba(255, 45, 32, .28)"
+                          strokeWidth="0.8"
+                          fill="none"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="h-[170px] w-[120px] flex flex-col items-center relative ">
+                      <h1
+                        className="text-sm tracking-[0.10em] mt-1 mb-7"
+                        style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
+                      >
+                        Frontend
+                      </h1>
+                      <img
+                        src="/img/react_logo.png"
+                        alt="react logo"
+                        className="w-[60px] h-[53.4375px] object-cover rounded"
+                      />
+                      <svg
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 120 170"
+                        className="absolute top-0 left-0"
+                        preserveAspectRatio="none"
+                      >
+                        <line x1="0" y1="0" x2="0" y2="170" stroke="#30A2FF" strokeWidth="6" />
+                        <polyline
+                          points="2,1 115,1 115,140 105,140 105,169 2,169"
+                          stroke="rgba(48, 162, 255, .28)"
+                          strokeWidth="1.7"
+                          fill="none"
+                        />
+                        <polyline
+                          points="115.9,0.4 120,0.4 120,144 110,144 110,169.7 105.9,169.7"
+                          stroke="rgba(48, 162, 255, .28)"
+                          strokeWidth="0.8"
+                          fill="none"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="h-[170px] w-[120px] flex flex-col items-center relative">
+                      <h1
+                        className="text-sm tracking-[0.10em] mt-1 mb-10"
+                        style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
+                      >
+                        Styling
+                      </h1>
+                      <img
+                        src="/img/tailwindcss_logo.png"
+                        alt="tailwind logo"
+                        className="w-[60px] h-[36.09375px] object-cover rounded"
+                      />
+                      <svg
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 120 170"
+                        className="absolute top-0 left-0"
+                        preserveAspectRatio="none"
+                      >
+                        <line x1="0" y1="0" x2="0" y2="170" stroke="#0FCEB7" strokeWidth="6" />
+                        <polyline
+                          points="2,1 115,1 115,140 105,140 105,169 2,169"
+                          stroke="rgba(15, 206, 183, 0.28)"
+                          strokeWidth="1.7"
+                          fill="none"
+                        />
+                        <polyline
+                          points="115.9,0.4 120,0.4 120,144 110,144 110,169.7 105.9,169.7"
+                          stroke="rgba(15, 206, 183, 0.28)"
+                          strokeWidth="0.8"
+                          fill="none"
+                        />
+                      </svg>
+                    </div>
                   </div>
-
-
                 </div>
               
                 
@@ -850,26 +881,26 @@ function App() {
               </div>
             </div>
           </div>
-          <div className='flex flex-wrap justify-between items-center mt-5 '>
-            <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-left"
+          <div className='flex flex-wrap items-center mt-20 border-2 w-full '>
+            <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-left border-2 w-full"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Info
             </h1>
-            <div className="flex  gap-6 w-full pt-5" >
-              <div class="flex-1  h-64  text-left " style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
-                <h2 className="pl-10 tracking-[0.25em] text-lg text-[#02E8E8]">Education</h2>
-                <p class="pl-15 mt-3 font-light" >Software Engineer with IA</p>
-                <p class="pl-15 mt-3 font-light">Senati - Higher Technological Institute</p>
-                <p class="pl-15 mt-3 font-light">January 2024 - Currently</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full pt-5 border-4 border-yellow-500 p-10" >
+              <div class="  h-64 text-left border-2 border-green-500" style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
+                <h2 className=" tracking-[0.25em] text-lg text-[#02E8E8]">Education</h2>
+                <p class="mt-3 font-light" >Software Engineer with IA</p>
+                <p class="mt-3 font-light">Senati - Higher Technological Institute</p>
+                <p class="mt-3 font-light">January 2024 - Currently</p>
               </div>
-              <div class="flex-1 h-64 text-left " style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
-                <h2 className="pl-10 tracking-[0.25em] text-lg text-[#02E8E8]">Email</h2>
-                <p class="pl-10 mt-1 font-light" >mrsek0192@gmail.com</p>
-                <h2 className="pl-10 mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Adress</h2>
-                <p class="pl-10 mt-1 font-light" >Lima, Perú</p>
-                <h2 className="pl-10 mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Number</h2>
-                <p class="pl-10 mt-1 font-light" >991979925</p>
+              <div class=" h-64 text-left border-2 border-green-500" style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
+                <h2 className=" tracking-[0.25em] text-lg text-[#02E8E8]">Email</h2>
+                <p class=" mt-1 font-light" >mrsek0192@gmail.com</p>
+                <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Adress</h2>
+                <p class=" mt-1 font-light" >Lima, Perú</p>
+                <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Number</h2>
+                <p class=" mt-1 font-light" >991979925</p>
               </div>
-              <div className="flex-1 h-64 justify-center flex ">
+              <div className=" justify-start flex border-2 border-green-500">
                 <div className='h-13 w-30 flex items-center relative justify-center align-center '>
                   <svg width="100%" height="100%" viewBox="0 0 30 13" className="absolute top-0 left-0" preserveAspectRatio="none">
 
