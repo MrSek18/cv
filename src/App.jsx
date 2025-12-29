@@ -446,12 +446,12 @@ function App() {
           </div>
 
           {/* Technologies / Tools  */}
-          <div className="flex flex-col h-auto w-full z-0 mt-20 border-2 border-slate-500 pl-10 pr-10">
+          <div className="flex flex-col h-auto w-full z-0 mt-20  pl-10 pr-10">
             <h1 className="md:pl-5 text-2xl tracking-[0.25em] text-[#fff] text-center md:text-left"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Technologies / Tools 
             </h1>
-            <div className='flex flex-wrap  w-full max-w-3xl justify-around items-center mt-6'>
-              <div className='h-auto w-full max-w-120 sm:w-120 flex items-center justify-center relative  pl-10 pr-10 pb-12  [container-type:inline-size] '>
+            <div className='flex flex-wrap  w-full max-w-3xl justify-around items-center mt-6 gap-y-4 [container-type:inline-size] '>
+              <div className='h-auto w-full max-w-120  sm:w-120 flex items-center justify-center relative  pb-15 @[387px]:pr-10 @[387px]:pl-10 '>
               
                 <svg width="100%" height="100%" viewBox="0 0 400 240" className="absolute top-0 left-0 hidden @[384px]:block" preserveAspectRatio="none">
                   <line x1="40" y1="1" x2="350" y2="1" stroke="#fff" strokeWidth=".5" />
@@ -551,7 +551,7 @@ function App() {
 
                   
                 </svg>
-                <div className='h-auto w-full flex flex-col items-center text-left [container-type:inline-size]   '>
+                <div className='h-auto w-full flex flex-col items-center text-left [container-type:inline-size]  '>
                   <h1 className="text-base tracking-[0.15em] mb-5 mt-5 text-center md:text-left  w-full"
                   style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >FRAMEWORKS</h1>
                   
@@ -675,7 +675,7 @@ function App() {
               
                 
               </div>
-              <div className='h-[280px] w-[200px] flex items-center relative'>
+              <div className='h-[280px] w-[200px] flex items-center relative '>
               
                 <svg width="100%" height="100%" viewBox="0 0 200 280" className="absolute top-0 left-0" preserveAspectRatio="none">
                   <line x1="0" y1="0" x2="0" y2="0" stroke="#fff" strokeWidth=".5" />
@@ -756,7 +756,7 @@ function App() {
                 </div>
               
               </div>
-              <div className='h-[280px] w-[200px] flex items-center relative'>
+              <div className='h-[280px] w-[200px] flex items-center relative '>
               
                 <svg width="100%" height="100%" viewBox="0 0 200 280" className="absolute top-0 left-0" preserveAspectRatio="none">
                   <line x1="0" y1="0" x2="0" y2="0" stroke="#fff" strokeWidth=".5" />
@@ -1078,7 +1078,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className='flex flex-wrap items-center mt-20 border-2 w-full border-2 border-slate-500 pl-10 pr-10 '>
+          <div className='flex flex-wrap items-center mt-20 border-2 w-full  pl-10 pr-10 '>
             <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-center w-full sm:text-left"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Info
             </h1>
