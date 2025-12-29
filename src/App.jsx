@@ -1078,7 +1078,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className='flex flex-wrap items-center mt-20 border-2 w-full  pl-10 pr-10 '>
+          <div className='flex flex-wrap items-center mt-20  w-full  pl-10 pr-10 '>
             <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-center w-full sm:text-left"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Info
             </h1>
