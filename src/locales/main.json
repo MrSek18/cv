@@ -1,0 +1,17 @@
+{
+    "es": {
+        "welcome": "Bienvenido a la página",
+        "firstContainer" : {
+            "subtitle": "Estudiante de ingeniería de software con IA",
+            "thirdline": "Me gusta programar"
+        }
+        
+        },
+    "en": {
+        "welcome": "Welcome to the page",
+        "firstContainer" : {
+            "subtitle": "Software engineering student with AI",
+            "thirdline": "I like programming"
+        }
+    }
+}
