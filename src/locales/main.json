@@ -4,14 +4,135 @@
         "firstContainer" : {
             "subtitle": "Estudiante de ingeniería de software con IA",
             "thirdline": "Me gusta programar"
-        }
-        
         },
+        "projects": {
+            "title": "Proyectos",
+            "card1": {
+                "name": "ONG",
+                "description": "Página institucional con sistema de donaciones integrado con mercado pago."
+            },
+            "card2": {
+                "name": "Requerimientos",
+                "description": "Panel de administración para proyectos, clientes, y empleados." 
+            }
+        },
+        "techTools": {
+            "title": "Tecnologías / Herramientas",
+            "tools": {
+                "title": "Framework y liberías",
+                "cards" : {
+                    "1": "Servidor",
+                    "2": "Cliente",
+                    "3": "Estilo"
+                }
+            },
+            "design": {
+                "title": "Diseño"
+            },
+            "pl":{
+                "title": "Lenguajes de programación"
+            },
+            "cd":{
+                "title": "Editores de código"
+            },
+            "social":{
+                "title": "Social"
+            }
+        },
+        "info":{
+            "title": "Información",
+            "education": {
+                "title": "Educación",
+                "1": "Estudiante de Ingeniería de Software con IA",
+                "2": "Senati - Intituto de Educación Superior Tecnológico Privado",
+                "3": "Febrero 2024 - Actualidad"
+            },
+            "contact": {
+                "email": {
+                    "title": "Correo electrónico",
+                    "description": "mrsek0192@gmail.com"
+                },
+                "adress": {
+                    "title": "Dirección",
+                    "description": "Lima, Perú"
+                },
+                "number":{
+                    "title": "Número",
+                    "description": "991-979-925"
+                },
+                "cv":{
+                    "title": "Descargar cv"
+                }
+        }
+    
+        }
+    },
     "en": {
         "welcome": "Welcome to the page",
-        "firstContainer" : {
-            "subtitle": "Software engineering student with AI",
+        "firstContainer": {
+            "subtitle": "Software Engineering student with AI",
             "thirdline": "I like programming"
+        },
+        "projects": {
+            "title": "Projects",
+            "card1": {
+            "name": "NGO",
+            "description": "Institutional website with a donation system integrated with Mercado Pago."
+            },
+            "card2": {
+            "name": "Requirements",
+            "description": "Administration panel for projects, clients, and employees."
+            }
+        },
+        "techTools": {
+            "title": "Technologies / Tools",
+            "tools": {
+            "title": "Frameworks and Libraries",
+            "cards": {
+                "1": "Backend",
+                "2": "Frontend",
+                "3": "Styling"
+            }
+            },
+            "design": {
+            "title": "Design"
+            },
+            "pl": {
+            "title": "Programming Languages"
+            },
+            "cd": {
+            "title": "Code Editors"
+            },
+            "social": {
+            "title": "Social"
+            }
+        },
+        "info": {
+            "title": "Information",
+            "education": {
+            "title": "Education",
+            "1": "Software Engineering student with AI",
+            "2": "Senati – Private Higher Technological Education Institute",
+            "3": "February 2024 – Present"
+            },
+            "contact": {
+            "email": {
+                "title": "Email",
+                "description": "mrsek0192@gmail.com"
+            },
+            "adress": {
+                "title": "Address",
+                "description": "Lima, Peru"
+            },
+            "number": {
+                "title": "Phone Number",
+                "description": "991-979-925"
+            },
+            "cv": {
+                "title": "Download CV"
+            }
+            }
         }
     }
+
 }

@@ -15,9 +15,16 @@ import hackingSilouette2 from "./assets/hacking_guy_logo2.png";
 import spanishFlag from "./assets/spain.png";
 import usaFlag from "./assets/usa.png";
 
+import { useTranslation } from "react-i18next";
 function App() {
+  const { t , i18n} = useTranslation("main");
   const [show, setShow] = useState(false);
+  
+  const cvFile =
+  i18n.language === "en" ? "/cv_en.pdf" : "/cv_es.pdf";
 
+  const cvName =
+    i18n.language === "en" ? "cv_en.pdf" : "cv_es.pdf";
 
   // programing languages
   const programmingLanguages = [
@@ -107,8 +114,16 @@ function App() {
             {/* Header */}
           {/* Languages block */}
           <div className="flex flex-row w-full h-15  relative pl-10 pr-10 justify-start items-center gap-4">
-            <img src={spanishFlag} alt="spanishFlag" className=" w-8.5 h-auto cursor-pointer hover:scale-105 transition" />
-            <img src={usaFlag} alt="usaFlag" className=" w-8.5 h-auto cursor-pointer hover:scale-105 transition" />
+            <div onClick={() => {
+              i18n.changeLanguage("es");
+            }}>
+              <img src={spanishFlag} alt="spanishFlag" className=" w-8.5 h-auto cursor-pointer hover:scale-105 transition" />
+            </div>
+            <div onClick={() => {
+              i18n.changeLanguage("en");
+            }}>
+              <img src={usaFlag} alt="usaFlag" className=" w-8.5 h-auto cursor-pointer hover:scale-105 transition" />
+            </div>
           </div>  
           <div className="flex flex-wrap h-auto min-h-[340px] w-full items-start [container-type:inline-size]   pl-10 pr-10 ">
 
@@ -127,13 +142,13 @@ function App() {
                   className="text-lg md:text-lg tracking-wide text-white w-auto text-center @[470px]:text-left "
                   style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 300 }}
                 >
-                  Software Engineer with IA student
+                   {t("firstContainer.subtitle")}
                 </h2>
                 <p
                   className="text-sm tracking-wide text-white text-center @[470px]:text-left  "
                   style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 100 }}
                 >
-                  I like to program
+                  {t("firstContainer.thirdline")}
                 </p>
               </div>
             </div>
@@ -155,7 +170,7 @@ function App() {
               className="text-2xl tracking-[0.25em]  text-[#fff] text-center md:text-left " 
               style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
             >
-              Projects
+              {t("projects.title")}
             </h1>
 
             <div className="flex h-auto flex-col md:flex-row gap-3 w-full justify-center items-center  [container-type:inline-size] mt-5" >
@@ -205,13 +220,13 @@ function App() {
                     className="text-xl tracking-[0.15em] text-[#02E8E8]"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                   >
-                    ONG
+                    {t("projects.card1.name")}
                   </h1>
                   <p
                     className="text-sm tracking-wider text-center @[380px]: text-left"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                   >
-                    Pagina institucional con sistema de donacion integrado con mercado pago
+                    {t("projects.card1.description")}
                   </p>
                   <div className="flex justify-center gap-1">
                     <img src="/img/laravel_logo.png" alt="laravel" className="h-7.5 w-7.5" />
@@ -342,13 +357,13 @@ function App() {
                     className="text-xl tracking-[0.15em] text-[#02E8E8]"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                   >
-                    Solicitudes
+                    {t("projects.card2.name")}
                   </h1>
                   <p
                     className="text-sm tracking-wider text-center @[380px]: text-left"
                     style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                   >
-                    Panel de administración para proyectos, clientes y empleados.
+                    {t("projects.card2.description")}
                   </p>
                   <div className="flex justify-center gap-1">
                     <img src="/img/laravel_logo.png" alt="laravel" className="h-7.5 w-7.5" />
@@ -448,7 +463,7 @@ function App() {
           {/* Technologies / Tools  */}
           <div className="flex flex-col h-auto w-full z-0 mt-20  pl-10 pr-10">
             <h1 className="md:pl-5 text-2xl tracking-[0.25em] text-[#fff] text-center md:text-left"
-                style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Technologies / Tools 
+                style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >{t("techTools.title")}
             </h1>
             <div className='flex flex-wrap  w-full max-w-3xl justify-around items-center mt-6 gap-y-4 [container-type:inline-size] '>
               <div className='h-auto w-full max-w-120  sm:w-120 flex items-center justify-center relative  pb-15 @[387px]:pr-10 @[387px]:pl-10 '>
@@ -553,7 +568,7 @@ function App() {
                 </svg>
                 <div className='h-auto w-full flex flex-col items-center text-left [container-type:inline-size]  '>
                   <h1 className="text-base tracking-[0.15em] mb-5 mt-5 text-center md:text-left  w-full"
-                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >FRAMEWORKS</h1>
+                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >{t("techTools.tools.title")}</h1>
                   
                   <div
                     className="
@@ -571,7 +586,7 @@ function App() {
                         className="text-sm tracking-[0.10em] mt-1 mb-7"
                         style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                       >
-                        Backend
+                        {t("techTools.tools.cards.1")}
                       </h1>
                       <img
                         src="/img/laravel_logo.png"
@@ -606,7 +621,7 @@ function App() {
                         className="text-sm tracking-[0.10em] mt-1 mb-7"
                         style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                       >
-                        Frontend
+                        {t("techTools.tools.cards.2")}
                       </h1>
                       <img
                         src="/img/react_logo.png"
@@ -641,7 +656,7 @@ function App() {
                         className="text-sm tracking-[0.10em] mt-1 mb-10"
                         style={{ fontFamily: '"Roboto Condensed", sans-serif' }}
                       >
-                        Styling
+                        {t("techTools.tools.cards.3")}
                       </h1>
                       <img
                         src="/img/tailwindcss_logo.png"
@@ -746,7 +761,7 @@ function App() {
                 </svg>
                 <div className='h-[280px] w-[200px] '>
                   <h1 className="text-md tracking-[0.15em] mt-5 ml-5 text-center md:text-left "
-                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Styling and structure</h1>
+                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >{t("techTools.design.title")}</h1>
                   <img 
                     src="/img/figma_logo.png" 
                     alt="postgresql logo"
@@ -841,7 +856,7 @@ function App() {
                 </svg>
                 <div className='h-[280px] w-[200px] '>
                   <h1 className="text-md tracking-[0.15em] mt-5 ml-5 text-center md:text-left "
-                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Programming languages</h1>
+                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >{t("techTools.pl.title")}</h1>
                   <img 
                     src={programmingLanguages[currentIndex].logo}
                     alt="dynamic logo"
@@ -959,7 +974,7 @@ function App() {
                 </svg>
                 <div className='h-[280px] w-[200px] '>
                   <h1 className="text-md tracking-[0.15em] mt-5 ml-5 text-center md:text-left "
-                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Code editors</h1>
+                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >{t("techTools.cd.title")}</h1>
                   <img 
                     src={editors[currentIndexEditor].logo}
                     alt="dynamic logo"
@@ -1066,7 +1081,7 @@ function App() {
                 </svg>
                 <div className='h-[280px] w-[200px] '>
                   <h1 className="text-md tracking-[0.15em] mt-5 ml-5 text-center md:text-left "
-                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >Socials</h1>
+                  style={{ fontFamily: '"Roboto Condensed", sans-serif' }} >{t("techTools.social.title")}</h1>
                   <img 
                     src="/img/linkedin_logo.png" 
                     alt="postgresql logo"
@@ -1079,93 +1094,62 @@ function App() {
             </div>
           </div>
           <div className='flex flex-wrap items-center mt-20  w-full  pl-10 pr-10 '>
-            <h1 className="pl-5 text-xl tracking-[0.25em] text-[#fff] text-center w-full sm:text-left"
-                style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}}  >Info
+            <h1 className=" text-xl tracking-[0.25em] text-[#fff] text-center w-full sm:text-left "
+                style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400}} >{t("info.title")}
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full pt-5 p-10 " >
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full pt-5 p-10  " >
               <div
-                className="h-auto text-left  flex flex-col justify-start items-center sm:items-start"
+                className="h-auto text-center sm:text-left  flex flex-col justify-start items-center sm:items-start"
                 style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400 }}
               >
-                <h2 className="tracking-[0.25em] text-lg text-[#02E8E8]">Education</h2>
-                <p className="mt-3 font-light">Software Engineer with IA</p>
-                <p className="mt-3 font-light">Senati - Higher Technological Institute</p>
-                <p className="mt-3 font-light">January 2024 - Currently</p>
+                <h2 className="tracking-[0.25em] text-lg text-[#02E8E8] ">{t("info.education.title")}</h2>
+                <p className="mt-3 font-light">{t("info.education.1")}</p>
+                <p className="mt-3 font-light">{t("info.education.2")}</p>
+                <p className="mt-3 font-light ">{t("info.education.3")}</p>
               </div>
 
               <div className=" h-auto text-left  flex flex-col justify-start  items-center sm:items-start " style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 400  }}>
-                <h2 className=" tracking-[0.25em] text-lg text-[#02E8E8]">Email</h2>
-                <p className=" mt-1 font-light" >mrsek0192@gmail.com</p>
-                <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Adress</h2>
-                <p className=" mt-1 font-light" >Lima, Perú</p>
-                <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">Number</h2>
-                <p className=" mt-1 font-light" >991979925</p>
+                <h2 className=" tracking-[0.25em] text-lg text-[#02E8E8]">{t("info.contact.email.title")}</h2>
+                <p className=" mt-1 font-light" >{t("info.contact.email.description")}</p>
+                <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">{t("info.contact.adress.title")}</h2>
+                <p className=" mt-1 font-light" >{t("info.contact.adress.description")}</p>
+                <h2 className=" mt-3 tracking-[0.25em] text-lg text-[#02E8E8]">{t("info.contact.number.title")}</h2>
+                <p className=" mt-1 font-light" >{t("info.contact.number.description")}</p>
               </div>
               <div className=" h-auto justify-center items-center sm:justify-start sm:items-start flex ">
-                <div className='h-13 w-30 flex items-center relative justify-center items-center '>
-                  <svg width="100%" height="100%" viewBox="0 0 30 13" className="absolute top-0 left-0" preserveAspectRatio="none">
-
-                    <polyline // up line
-                      points="21,0.65 0.1,0.65 0.1,12.35 1.5,12.35 " 
-                      stroke="#02E8E8" 
-                      strokeWidth="0.2" 
-                      fill="none" 
-                    />
-
-                    <polyline // squares inside the card
-                      points="30,0.1 28.8,0.1 28.8,1.2 29.9,1.2 29.9,0.1" 
-                      stroke="#02E8E8" 
-                      strokeWidth="0.2" 
-                      fill="none" 
-                    />
-                    <polyline // squares inside the card
-                      points="28.3,0.1 27.1,0.1 27.1,1.2 28.2,1.2 28.2,0" 
-                      stroke="#02E8E8" 
-                      strokeWidth="0.2" 
-                      fill="#02E8E8" 
-                    />
-                    <polyline // squares inside the card
-                      points="26.6,0.1 25.4,0.1 25.4,1.2 26.5,1.2 26.5,0.1" 
-                      stroke="#02E8E8" 
-                      strokeWidth="0.2" 
-                      fill="none" 
-                    />
-
-                    <polyline // down line
-                      points="29.4,2.5 29.4,12.35 10,12.35" 
-                      stroke="#02E8E8" 
-                      strokeWidth="0.2" 
-                      fill="none" 
-                    />
-                    <polyline // rectangle connection
-                      points="1.5,13 1.5,11.9 9.5,11.9 9.5,12.9 1.5,12.9" 
-                      stroke="#02E8E8" 
-                      strokeWidth="0.2" 
-                      fill="none" 
-                    />
-
-                   
-                   <line x1="24.5" y1="0.1" x2="24.12" y2="1.2" stroke="#02E8E8" strokeWidth="0.2" />
-                   <line x1="24" y1="0.1" x2="23.62" y2="1.2" stroke="#02E8E8" strokeWidth="0.2" />
-                   <line x1="23.5" y1="0.1" x2="23.12" y2="1.2" stroke="#02E8E8" strokeWidth="0.2" />
-                   <line x1="23" y1="0.1" x2="22.62" y2="1.2" stroke="#02E8E8" strokeWidth="0.2" />
-                   <line x1="22.5" y1="0.1" x2="22.12" y2="1.2" stroke="#02E8E8" strokeWidth="0.2" />
-                   
+                 <div className="h-13 w-30 flex items-center relative justify-center">
+                  {/* SVG */}
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 30 13"
+                    className="absolute top-0 left-0"
+                    preserveAspectRatio="none"
+                  >
+                    <polyline points="21,0.65 0.1,0.65 0.1,12.35 1.5,12.35" stroke="#02E8E8" strokeWidth="0.2" fill="none" />
+                    <polyline points="30,0.1 28.8,0.1 28.8,1.2 29.9,1.2 29.9,0.1" stroke="#02E8E8" strokeWidth="0.2" fill="none" />
+                    <polyline points="28.3,0.1 27.1,0.1 27.1,1.2 28.2,1.2 28.2,0" stroke="#02E8E8" strokeWidth="0.2" fill="#02E8E8" />
+                    <polyline points="26.6,0.1 25.4,0.1 25.4,1.2 26.5,1.2 26.5,0.1" stroke="#02E8E8" strokeWidth="0.2" fill="none" />
+                    <polyline points="29.4,2.5 29.4,12.35 10,12.35" stroke="#02E8E8" strokeWidth="0.2" fill="none" />
+                    <polyline points="1.5,13 1.5,11.9 9.5,11.9 9.5,12.9 1.5,12.9" stroke="#02E8E8" strokeWidth="0.2" fill="none" />
                   </svg>
+
+                  {/* BOTÓN */}
                   <a
-                    href="/cv.pdf"
-                    download="cv.pdf"
-                    className="w-26 h-8 bg-[#09F0F0] text-[#04101B] 
-                              hover:bg-[#06caca] hover:text-white 
-                              flex justify-center items-center cursor-pointer 
-                              relative z-10 transition-colors duration-200"
+                    href={cvFile}
+                    download={cvName}
+                    className="
+                      w-26 h-8 bg-[#09F0F0] text-[#04101B]
+                      hover:bg-[#06caca] hover:text-white
+                      flex justify-center items-center cursor-pointer
+                      relative z-10 transition-colors duration-200
+                    "
                     style={{ fontFamily: '"Roboto Condensed", sans-serif', fontWeight: 300 }}
                   >
                     <h2 className="tracking-[0.08em] text-sm">
-                      Download cv
+                      {t("info.contact.cv.title")}
                     </h2>
                   </a>
-
                 </div>
               </div>
                   
