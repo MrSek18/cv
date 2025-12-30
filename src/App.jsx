@@ -113,7 +113,7 @@ function App() {
           </div>
             {/* Header */}
           {/* Languages block */}
-          <div className="flex flex-row w-full h-15  relative pl-10 pr-10 justify-start items-center gap-4">
+          <div className="flex flex-row w-full h-15  relative pl-10 pr-10 justify-center sm:justify-start items-center gap-4">
             <div onClick={() => {
               i18n.changeLanguage("es");
             }}>
